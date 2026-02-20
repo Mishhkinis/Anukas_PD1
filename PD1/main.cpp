@@ -33,7 +33,7 @@ double INR_Parduoti=107.8546;
     }
     else if (m==3){
     cout <<"1EUR= "<<fixed << setprecision(2) << INR_Bendras<<" INR"<<endl;
-    } if (n==2)
+    } if (n==2){
     cout <<"Kokia valiuta norite isigyti?(1. GBP, 2. USD, 3. INR)"<<endl; // PIRKIMAS
     int valiutaPIRKTI;
     cin>>valiutaPIRKTI;
@@ -53,5 +53,26 @@ double INR_Parduoti=107.8546;
     pirkti=eurKIEKIS*INR_Pirkti;
     cout<<"Jus gausite: "<<fixed << setprecision(2) <<pirkti<<" INR"<<endl;
     }
+    }
+    if (n==3) // pardavimas
+    cout <<"Kokia valiuta norite parduoti?(1. GBP, 2. USD, 3. INR)"<<endl;
+    int valiutaPARDUOTI;
+    cin>>valiutaPARDUOTI;
+    cout <<"Koki kieki norite parduoti?"<<endl;
+    int kiekisPARDUOTI;
+    cin>>kiekisPARDUOTI;
+    if (valiutaPARDUOTI==1){
+        double suma=kiekisPARDUOTI*GBP_Parduoti;
+        cout <<suma;
+    }
+    else if (valiutaPARDUOTI==2){
+        double suma=kiekisPARDUOTI*USD_Parduoti;
+        cout <<suma;
+    }
+    else if (valiutaPARDUOTI==3){
+        double suma=kiekisPARDUOTI*INR_Parduoti;
+        cout <<suma;
+    }
+
     return 0;
 }
