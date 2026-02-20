@@ -33,6 +33,25 @@ double INR_Parduoti=107.8546;
     }
     else if (m==3){
     cout <<"1EUR= "<<fixed << setprecision(2) << INR_Bendras<<" INR"<<endl;
+    } if (n==2)
+    cout <<"Kokia valiuta norite isigyti?(1. GBP, 2. USD, 3. INR)"<<endl; // PIRKIMAS
+    int valiutaPIRKTI;
+    cin>>valiutaPIRKTI;
+    cout<<"Iveskite euru kieki"<< endl;
+    int eurKIEKIS;
+    cin>>eurKIEKIS;
+    int pirkti;
+    if (valiutaPIRKTI==1){
+    pirkti=eurKIEKIS*GBP_Pirkti;
+    cout<<"Jus gausite: "<<fixed << setprecision(2) <<pirkti<<" GBP"<<endl;
+    }
+    else if (valiutaPIRKTI==2){
+    pirkti=eurKIEKIS*USD_Pirkti;
+    cout<<"Jus gausite: "<<fixed << setprecision(2) <<pirkti<<" USD"<<endl;
+    }
+    else if (valiutaPIRKTI==3){
+    pirkti=eurKIEKIS*INR_Pirkti;
+    cout<<"Jus gausite: "<<fixed << setprecision(2) <<pirkti<<" INR"<<endl;
     }
     return 0;
 }
