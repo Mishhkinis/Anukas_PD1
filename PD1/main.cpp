@@ -21,5 +21,18 @@ double INR_Parduoti=107.8546;
     cout << "3. Galimybe parduoti valiuta (t. y. parduoti valiuta)." << endl;
     cout << "Iveskite skaiciu (1-3): ";
     cin >>n;
+      if (n==1){ // Palyginimas
+    cout<<"Pasirinkite valiuta(1. GBP, 2. USD, 3. INR)"<<endl;
+    cout<<"Iveskite skaiciu (1-3): "<<endl;
+    cin >>m;}
+     if ((n==1)&&(m==1)){
+    cout <<"1EUR= "<<fixed << setprecision(2) << GBP_Bendras<<" GBP"<<endl;
+    }
+    else if (m==2){
+    cout <<"1EUR= "<<fixed << setprecision(2) << USD_Bendras<<" USD"<<endl;
+    }
+    else if (m==3){
+    cout <<"1EUR= "<<fixed << setprecision(2) << INR_Bendras<<" INR"<<endl;
+    }
     return 0;
 }
